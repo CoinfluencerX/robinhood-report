@@ -23,7 +23,12 @@ def main(argv=None):
     ap.add_argument("--jarvis", required=True, help="path to operation-jarvis")
     ap.add_argument("--build", required=True, help="data/build.json from `rhreport build`")
     ap.add_argument("--out", required=True)
+    ap.add_argument("--proxy-credential", action="store_true",
+                    help="cloud mode: the network proxy injects the OpenRouter key; use --ledger for the budget ledger")
+    ap.add_argument("--ledger", help="budget ledger path for --proxy-credential mode (same $1/day, 200-attempt rules)")
     args = ap.parse_args(argv)
+    if args.proxy_credential and not args.ledger:
+        ap.error("--proxy-credential needs --ledger")
 
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     sys.path.insert(0, str(Path(args.jarvis).expanduser() / "tools"))
@@ -31,11 +36,16 @@ def main(argv=None):
     import jev_mcp
     from rhreport import jev
 
-    home = jev_mcp.APPROVED_HOME
-    os.environ["HERMES_HOME"] = home
-    ledger = jev_decisions.BudgetLedger(os.path.join(home, "state", "jev-budget.sqlite3"))
-    client = jev_decisions.DecisionClient(transport=jev_decisions.UrllibTransport(),
-                                          credential_supplier=jev_mcp.make_credential_supplier(jev_mcp._load_pool),
+    if args.proxy_credential:
+        # The key never enters this process: the proxy overwrites the Authorization header for openrouter.ai.
+        ledger = jev_decisions.BudgetLedger(str(Path(args.ledger).expanduser()))
+        supplier = lambda: "proxy-injected-placeholder"  # noqa: E731
+    else:
+        home = jev_mcp.APPROVED_HOME
+        os.environ["HERMES_HOME"] = home
+        ledger = jev_decisions.BudgetLedger(os.path.join(home, "state", "jev-budget.sqlite3"))
+        supplier = jev_mcp.make_credential_supplier(jev_mcp._load_pool)
+    client = jev_decisions.DecisionClient(transport=jev_decisions.UrllibTransport(), credential_supplier=supplier,
                                           ledger=ledger)
     build = json.loads(Path(args.build).read_text())
     decisions = jev.classify_all(client, build["snapshot"], build["derived"])

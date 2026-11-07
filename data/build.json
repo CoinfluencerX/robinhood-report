@@ -1,11 +1,11 @@
 {
   "snapshot": {
     "schema": "robinhood-report/snapshot/v1",
-    "as_of": "2026-11-07T01:01:21Z",
+    "as_of": "2026-11-07T01:29:45Z",
     "chain": {
       "id": 46630,
       "name": "Robinhood Chain testnet",
-      "block": 149767540,
+      "block": 149776688,
       "explorer": "https://explorer.testnet.chain.robinhood.com"
     },
     "edel": {
@@ -17,111 +17,111 @@
       "TSLA": {
         "name": "Tesla",
         "token": "0xC9f9c86933092BbbfFF3CCb4b105A4A94bf3Bd4E",
-        "holders": 242028,
-        "lifetime_transfers": 4873831,
+        "holders": 242032,
+        "lifetime_transfers": 4874141,
         "suppliers": 25940,
         "borrowers": 9514,
         "oracle_price_usd": 425.0,
-        "supplied": 159960.5782,
-        "borrowed": 24043.6138,
+        "supplied": 159960.6057,
+        "borrowed": 24043.6443,
         "utilization": 0.1503,
-        "supplied_usd": 67983245.75,
-        "borrowed_usd": 10218535.85,
+        "supplied_usd": 67983257.41,
+        "borrowed_usd": 10218548.84,
         "supply_apr": 0.003161,
         "borrow_apr": 0.023376,
         "activity": {
           "sample_size": 200,
-          "window_start": "2026-11-06T20:49:28Z",
-          "window_end": "2026-11-07T00:59:58Z",
-          "window_hours": 4.175,
-          "transfers_per_hour": 47.9,
-          "mint_share": 0.48,
-          "edel_share": 0.1,
-          "organic_share": 0.42,
-          "organic_per_hour": 20.1,
-          "organic_unique_addresses": 32,
+          "window_start": "2026-11-06T22:23:12Z",
+          "window_end": "2026-11-07T01:27:53Z",
+          "window_hours": 3.078,
+          "transfers_per_hour": 65.0,
+          "mint_share": 0.59,
+          "edel_share": 0.125,
+          "organic_share": 0.285,
+          "organic_per_hour": 18.5,
+          "organic_unique_addresses": 24,
           "kinds": {
-            "organic": 84,
-            "edel": 20,
-            "mint": 96
+            "mint": 118,
+            "edel": 25,
+            "organic": 57
           },
           "edel_methods": {
-            "supply": 8,
-            "withdraw": 7,
+            "supply": 10,
+            "withdraw": 9,
             "borrow": 3,
-            "repay": 2
+            "repay": 3
           },
-          "example_tx": "0x09d462ea91061e64ce5abde9d3bc3cc7933508d70ea395769b3145ca07060373"
+          "example_tx": "0x249b3ca3dc5cf85a12694ec5899e83f86da9d70d849cb6127392ce0d67c54195"
         }
       },
       "AMZN": {
         "name": "Amazon",
         "token": "0x5884aD2f920c162CFBbACc88C9C51AA75eC09E02",
-        "holders": 304841,
-        "lifetime_transfers": 4045166,
+        "holders": 304844,
+        "lifetime_transfers": 4044892,
         "suppliers": 13625,
         "borrowers": 12674,
         "oracle_price_usd": 207.0,
-        "supplied": 63963.4147,
-        "borrowed": 15808.6327,
+        "supplied": 63963.4445,
+        "borrowed": 15808.6658,
         "utilization": 0.2472,
-        "supplied_usd": 13240426.84,
-        "borrowed_usd": 3272386.97,
+        "supplied_usd": 13240433.01,
+        "borrowed_usd": 3272393.82,
         "supply_apr": 0.008541,
         "borrow_apr": 0.038422,
         "activity": {
           "sample_size": 200,
-          "window_start": "2026-11-06T20:33:28Z",
-          "window_end": "2026-11-07T00:57:24Z",
-          "window_hours": 4.399,
-          "transfers_per_hour": 45.5,
-          "mint_share": 0.53,
+          "window_start": "2026-11-06T21:44:42Z",
+          "window_end": "2026-11-07T01:28:50Z",
+          "window_hours": 3.736,
+          "transfers_per_hour": 53.5,
+          "mint_share": 0.635,
           "edel_share": 0.04,
-          "organic_share": 0.43,
-          "organic_per_hour": 19.6,
-          "organic_unique_addresses": 34,
+          "organic_share": 0.325,
+          "organic_per_hour": 17.4,
+          "organic_unique_addresses": 26,
           "kinds": {
-            "edel": 8,
-            "mint": 106,
-            "organic": 86
+            "organic": 65,
+            "mint": 127,
+            "edel": 8
           },
           "edel_methods": {
             "borrow": 5,
             "repay": 3
           },
-          "example_tx": "0x20fdf62503ab02f565fead8091842108e5d19ed643de9bd9d17173f087baf111"
+          "example_tx": "0x051474df13fa72dca78508ab47d57e7ceb1919d9a1267a37722417582f3040b9"
         }
       },
       "PLTR": {
         "name": "Palantir",
         "token": "0x1FBE1a0e43594b3455993B5dE5Fd0A7A266298d0",
-        "holders": 239069,
-        "lifetime_transfers": 3921248,
+        "holders": 239072,
+        "lifetime_transfers": 3921644,
         "suppliers": 15045,
         "borrowers": 14031,
         "oracle_price_usd": 140.0,
-        "supplied": 95945.327,
-        "borrowed": 22904.9401,
+        "supplied": 95945.3685,
+        "borrowed": 22904.9862,
         "utilization": 0.2387,
-        "supplied_usd": 13432345.78,
-        "borrowed_usd": 3206691.61,
+        "supplied_usd": 13432351.59,
+        "borrowed_usd": 3206698.07,
         "supply_apr": 0.00797,
         "borrow_apr": 0.037114,
         "activity": {
           "sample_size": 200,
-          "window_start": "2026-11-06T22:30:33Z",
-          "window_end": "2026-11-07T00:56:49Z",
-          "window_hours": 2.438,
-          "transfers_per_hour": 82.0,
-          "mint_share": 0.33,
+          "window_start": "2026-11-06T23:19:25Z",
+          "window_end": "2026-11-07T01:29:04Z",
+          "window_hours": 2.161,
+          "transfers_per_hour": 92.6,
+          "mint_share": 0.525,
           "edel_share": 0.03,
-          "organic_share": 0.64,
-          "organic_per_hour": 52.5,
-          "organic_unique_addresses": 53,
+          "organic_share": 0.445,
+          "organic_per_hour": 41.2,
+          "organic_unique_addresses": 40,
           "kinds": {
-            "edel": 6,
-            "mint": 66,
-            "organic": 128
+            "organic": 89,
+            "mint": 105,
+            "edel": 6
           },
           "edel_methods": {
             "supply": 1,
@@ -129,79 +129,79 @@
             "borrow": 3,
             "repay": 1
           },
-          "example_tx": "0x39bca6cef826779253c3b85978708a885f1bb23e0bf9c7c22c9fc8df6d4bae30"
+          "example_tx": "0xeeb8809dc2446fa2c687cccbc4f917ca49767644030c1df65828a15356314749"
         }
       },
       "AMD": {
         "name": "AMD",
         "token": "0x71178BAc73cBeb415514eB542a8995b82669778d",
-        "holders": 240954,
-        "lifetime_transfers": 4014425,
+        "holders": 240957,
+        "lifetime_transfers": 4014722,
         "suppliers": 7431,
         "borrowers": 12237,
         "oracle_price_usd": 214.0,
-        "supplied": 32014.608,
-        "borrowed": 13228.0105,
+        "supplied": 32014.6494,
+        "borrowed": 13228.0565,
         "utilization": 0.4132,
-        "supplied_usd": 6851126.11,
-        "borrowed_usd": 2830794.24,
+        "supplied_usd": 6851134.96,
+        "borrowed_usd": 2830804.09,
         "supply_apr": 0.023818,
         "borrow_apr": 0.064162,
         "activity": {
           "sample_size": 200,
-          "window_start": "2026-11-06T20:49:48Z",
-          "window_end": "2026-11-07T01:00:09Z",
-          "window_hours": 4.173,
-          "transfers_per_hour": 47.9,
-          "mint_share": 0.475,
+          "window_start": "2026-11-06T22:16:21Z",
+          "window_end": "2026-11-07T01:27:53Z",
+          "window_hours": 3.192,
+          "transfers_per_hour": 62.7,
+          "mint_share": 0.6,
           "edel_share": 0.025,
-          "organic_share": 0.5,
-          "organic_per_hour": 24.0,
-          "organic_unique_addresses": 36,
+          "organic_share": 0.375,
+          "organic_per_hour": 23.5,
+          "organic_unique_addresses": 29,
           "kinds": {
-            "organic": 100,
-            "edel": 5,
-            "mint": 95
+            "mint": 120,
+            "organic": 75,
+            "edel": 5
           },
           "edel_methods": {
             "borrow": 2,
             "repay": 3
           },
-          "example_tx": "0x0fbfabdf49320408ed20b0478ad9b92f2c2dd0f3156bc5d088168cb4b32e1b94"
+          "example_tx": "0x249b3ca3dc5cf85a12694ec5899e83f86da9d70d849cb6127392ce0d67c54195"
         }
       },
       "NFLX": {
         "name": "Netflix",
         "token": "0x3b8262A63d25f0477c4DDE23F83cfe22Cb768C93",
-        "holders": 236683,
-        "lifetime_transfers": 3728083,
+        "holders": 236686,
+        "lifetime_transfers": 3728355,
         "suppliers": 4463,
         "borrowers": 10807,
         "oracle_price_usd": 83.0,
-        "supplied": 26047.3522,
-        "borrowed": 15131.8524,
+        "supplied": 26047.8111,
+        "borrowed": 15132.3951,
         "utilization": 0.5809,
-        "supplied_usd": 2161930.23,
-        "borrowed_usd": 1255943.75,
+        "supplied_usd": 2161968.32,
+        "borrowed_usd": 1255988.79,
         "supply_apr": 0.3336,
         "borrow_apr": 0.663348,
         "activity": {
           "sample_size": 200,
-          "window_start": "2026-11-06T20:38:24Z",
-          "window_end": "2026-11-07T00:59:43Z",
-          "window_hours": 4.355,
-          "transfers_per_hour": 45.9,
-          "mint_share": 0.515,
+          "window_start": "2026-11-06T21:55:45Z",
+          "window_end": "2026-11-07T01:29:20Z",
+          "window_hours": 3.56,
+          "transfers_per_hour": 56.2,
+          "mint_share": 0.615,
           "edel_share": 0.0,
-          "organic_share": 0.485,
-          "organic_per_hour": 22.3,
-          "organic_unique_addresses": 36,
+          "organic_share": 0.385,
+          "organic_per_hour": 21.6,
+          "organic_unique_addresses": 31,
           "kinds": {
-            "organic": 97,
-            "mint": 103
+            "organic": 77,
+            "mint": 123
           },
           "edel_methods": {},
-          "example_tx": "0x47cc54b83bcebf9f72a8519631265d5a7821c280cf67ec5fcc94baa4fe83062e"
+          "example_tx": "0xcf7e2c503baea2ce2832b251b8f1aeb03b2a076a1ab0e5ffe658c3e08d2552b2"
         }
       }
     }
@@ -210,41 +210,69 @@
     "peer_median": {
       "utilization": 0.2472,
       "borrow_apr": 0.038422,
-      "organic_per_hour": 22.3,
-      "mint_share": 0.48
+      "organic_per_hour": 21.6,
+      "mint_share": 0.6
     },
     "tickers": {
       "TSLA": {
         "utilization_rank": 5,
         "utilization_vs_peer_median_pp": -9.7,
         "borrow_apr_vs_peer_median_pp": -1.5,
-        "organic_vs_peer_median": 0.9,
-        "sample_net_borrows": 1,
-        "sample_net_supplies": 1
+        "organic_vs_peer_median": 0.86,
+        "sample_net_borrows": 0,
+        "sample_net_supplies": 1,
+        "since_prev": {
+          "from": "2026-11-07T01:01:21Z",
+          "holders": 4,
+          "borrowed": 0.0305,
+          "utilization_pp": 0.0,
+          "borrow_apr_pp": 0.0
+        }
       },
       "AMZN": {
         "utilization_rank": 3,
         "utilization_vs_peer_median_pp": 0.0,
         "borrow_apr_vs_peer_median_pp": 0.0,
-        "organic_vs_peer_median": 0.88,
+        "organic_vs_peer_median": 0.81,
         "sample_net_borrows": 2,
-        "sample_net_supplies": 0
+        "sample_net_supplies": 0,
+        "since_prev": {
+          "from": "2026-11-07T01:01:21Z",
+          "holders": 3,
+          "borrowed": 0.0331,
+          "utilization_pp": 0.0,
+          "borrow_apr_pp": 0.0
+        }
       },
       "PLTR": {
         "utilization_rank": 4,
         "utilization_vs_peer_median_pp": -0.9,
         "borrow_apr_vs_peer_median_pp": -0.13,
-        "organic_vs_peer_median": 2.35,
+        "organic_vs_peer_median": 1.91,
         "sample_net_borrows": 2,
-        "sample_net_supplies": 0
+        "sample_net_supplies": 0,
+        "since_prev": {
+          "from": "2026-11-07T01:01:21Z",
+          "holders": 3,
+          "borrowed": 0.0461,
+          "utilization_pp": 0.0,
+          "borrow_apr_pp": 0.0
+        }
       },
       "AMD": {
         "utilization_rank": 2,
         "utilization_vs_peer_median_pp": 16.6,
         "borrow_apr_vs_peer_median_pp": 2.57,
-        "organic_vs_peer_median": 1.08,
+        "organic_vs_peer_median": 1.09,
         "sample_net_borrows": -1,
-        "sample_net_supplies": 0
+        "sample_net_supplies": 0,
+        "since_prev": {
+          "from": "2026-11-07T01:01:21Z",
+          "holders": 3,
+          "borrowed": 0.046,
+          "utilization_pp": 0.0,
+          "borrow_apr_pp": 0.0
+        }
       },
       "NFLX": {
         "utilization_rank": 1,
@@ -252,7 +280,14 @@
         "borrow_apr_vs_peer_median_pp": 62.49,
         "organic_vs_peer_median": 1.0,
         "sample_net_borrows": 0,
-        "sample_net_supplies": 0
+        "sample_net_supplies": 0,
+        "since_prev": {
+          "from": "2026-11-07T01:01:21Z",
+          "holders": 3,
+          "borrowed": 0.5427,
+          "utilization_pp": 0.0,
+          "borrow_apr_pp": 0.0
+        }
       }
     }
   }

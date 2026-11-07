@@ -6,7 +6,7 @@ Tokenized stocks (TSLA, AMZN, PLTR, AMD, NFLX) now live on Robinhood Chain, and 
 
 This project turns that into a weekly research report on [franklineth.ai/robinhood-report](https://franklineth.ai/robinhood-report) and a dataset for alpha-engine.
 
-![The report page rendering the first real snapshot (Robinhood Chain testnet, 2026-11-07)](docs/robinhood-report-demo.png)
+![The report page with the one-day JEV run (Robinhood Chain testnet, 2026-11-07)](docs/robinhood-report-demo.png)
 
 ## How it works
 
@@ -55,6 +55,7 @@ Every snapshot records the block it was read at.
 - **AMD is second** at 41.3%. TSLA is the least borrowed (15.0%) despite being the deepest market.
 - **PLTR has the most organic activity:** 52.5 non-faucet transfers an hour, 2.35 times the peer median.
 - Faucet mints were 48% of recent transfers at the median. Without that filter, most "activity" would be noise.
+- **JEV's one-day run (block 149,776,688):** NFLX = `short_demand` at 99% confidence, AMD = `short_demand` at 91%; AMZN, PLTR and TSLA were held (below JEV's 90% bar). 5 requests, $0.000137886 actual cost. JEV is now paused ([`data/jev_status.json`](data/jev_status.json)); later reports are ordered by utilization until it's switched back on.
 
 Full story: [`data/story.md`](data/story.md). Data: [`data/report.json`](data/report.json), [`data/metrics_long.csv`](data/metrics_long.csv).
 

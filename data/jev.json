@@ -1,0 +1,71 @@
+{
+  "schema": "robinhood-report/jev/v1",
+  "model": "~typesafe/jev-latest",
+  "ran_at": "2026-11-07T01:29:46Z",
+  "snapshot_as_of": "2026-11-07T01:29:45Z",
+  "decisions": {
+    "TSLA": {
+      "status": "hold",
+      "decision": null,
+      "probability": 0.89,
+      "confidence": 0.85,
+      "served_model": "typesafe/jev-1.14-20261014",
+      "cost_usd": "0.000028014",
+      "reason": "uncertain",
+      "advisory_only": true
+    },
+    "AMZN": {
+      "status": "hold",
+      "decision": null,
+      "probability": 0.58,
+      "confidence": 0.44,
+      "served_model": "typesafe/jev-1.14-20261014",
+      "cost_usd": "0.00002751",
+      "reason": "uncertain",
+      "advisory_only": true
+    },
+    "PLTR": {
+      "status": "hold",
+      "decision": null,
+      "probability": 0.65,
+      "confidence": 0.53,
+      "served_model": "typesafe/jev-1.14-20261014",
+      "cost_usd": "0.000028056",
+      "reason": "uncertain",
+      "advisory_only": true
+    },
+    "AMD": {
+      "status": "decided",
+      "decision": "short_demand",
+      "probability": 0.93,
+      "confidence": 0.91,
+      "served_model": "typesafe/jev-1.14-20261014",
+      "cost_usd": "0.000027342",
+      "reason": null,
+      "advisory_only": true
+    },
+    "NFLX": {
+      "status": "decided",
+      "decision": "short_demand",
+      "probability": 0.99,
+      "confidence": 0.99,
+      "served_model": "typesafe/jev-1.14-20261014",
+      "cost_usd": "0.000026964",
+      "reason": null,
+      "advisory_only": true
+    }
+  },
+  "budget_after": {
+    "day_utc": "2026-11-07",
+    "attempts": 5,
+    "max_attempts": 200,
+    "remaining_attempts": 195,
+    "reserved_usd": "0.05",
+    "actual_usd": "0.000137886",
+    "effective_usd": "0.05",
+    "limit_usd": "1",
+    "reserve_per_request_usd": "0.01",
+    "remaining_usd": "0.95",
+    "next_request_allowed": true
+  }
+}

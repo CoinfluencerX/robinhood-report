@@ -1,0 +1,8 @@
+{
+  "state": "paused",
+  "ran_on": "2026-11-07",
+  "paused_on": "2026-11-08",
+  "requests": 5,
+  "actual_cost_usd": "0.000137886",
+  "note": "JEV ran for one day (2026-11-07) and is paused to keep costs low. Later reports are ordered by borrow utilization until it is turned back on."
+}

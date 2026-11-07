@@ -132,6 +132,23 @@ class Export(unittest.TestCase):
         self.assertIn("JEV not run", rep["order_basis"])
         self.assertIn("not real shares", rep["disclaimer"])
 
+    def test_paused_jev_is_labelled(self):
+        rep = B.report(B.build(snap()), jev_status={"state": "paused", "paused_on": "2026-11-08"})
+        self.assertIsNone(rep["jev"])
+        self.assertEqual(rep["order_basis"], "utilization (JEV paused since 2026-11-08)")
+        self.assertEqual(rep["jev_status"]["state"], "paused")
+
+    def test_jev_order_used_when_present(self):
+        s = snap()
+        built = B.build(s)
+        fake = FakeJev({"TSLA": ("decided", "quiet", 0.95), "AMZN": ("hold", None, None),
+                        "PLTR": ("decided", "organic_accumulation", 0.99), "AMD": ("decided", "faucet_noise", 0.91),
+                        "NFLX": ("decided", "short_demand", 0.97)})
+        dec = jev.classify_all(fake, s, built["derived"])
+        rep = B.report(built, jev_out={"snapshot_as_of": s["as_of"], "decisions": dec, "model": "fixture"})
+        self.assertEqual(rep["order"], ["PLTR", "NFLX", "TSLA", "AMD", "AMZN"])
+        self.assertEqual(rep["order_basis"], "jev_confidence")
+
     def test_metrics_long_csv(self):
         rows = list(csv.DictReader(io.StringIO(B.metrics_long_csv(snap()))))
         self.assertEqual(len(rows), 5 * (len(B.METRIC_FIELDS) + len(B.ACTIVITY_FIELDS)))

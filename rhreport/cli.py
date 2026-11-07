@@ -52,7 +52,7 @@ def cmd_check_story(a):
 
 def cmd_report(a):
     built = _load(a.build)
-    rep = B.report(built, _load(a.jev), Path(a.story).read_text() if a.story else None)
+    rep = B.report(built, _load(a.jev), Path(a.story).read_text() if a.story else None, _load(a.jev_status))
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(rep, indent=2))
     if a.metrics_csv:
@@ -69,6 +69,7 @@ def main(argv=None):
     s = sub.add_parser("prompt"); s.add_argument("--build", default="data/build.json"); s.add_argument("--jev")
     s = sub.add_parser("check-story"); s.add_argument("--story", required=True); s.add_argument("--build", default="data/build.json"); s.add_argument("--jev")
     s = sub.add_parser("report"); s.add_argument("--build", default="data/build.json"); s.add_argument("--jev"); s.add_argument("--story")
+    s.add_argument("--jev-status", help="data/jev_status.json (paused/active)")
     s.add_argument("--out", default="data/report.json"); s.add_argument("--metrics-csv")
     a = ap.parse_args(argv)
     return {"collect": cmd_collect, "build": cmd_build, "prompt": cmd_prompt, "check-story": cmd_check_story,
