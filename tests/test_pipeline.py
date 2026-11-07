@@ -125,6 +125,25 @@ class Story(unittest.TestCase):
             B.report(built, jev_out={"snapshot_as_of": "2020-01-01T00:00:00Z", "decisions": {"TSLA": {}}})
 
 
+class VerifyReport(unittest.TestCase):
+    def test_verify_report_uses_its_own_jev_numbers(self):
+        import tempfile
+        from rhreport import cli
+        s = snap()
+        built = B.build(s)
+        fake = FakeJev({t: ("decided", "quiet", 0.97) for t in s["tickers"]})
+        dec = jev.classify_all(fake, s, built["derived"])
+        rep = B.report(built, jev_out={"snapshot_as_of": s["as_of"], "decisions": dec, "model": "fixture"},
+                       story_md="TSLA is quiet (JEV, 97%) at 25% utilization.")
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as f:
+            json.dump(rep, f)
+        self.assertEqual(cli.main(["verify-report", "--report", f.name]), 0)
+        rep["story"]["markdown"] += " Borrowing is up 73%."
+        with open(f.name, "w") as g:
+            json.dump(rep, g)
+        self.assertEqual(cli.main(["verify-report", "--report", f.name]), 1)
+
+
 class Export(unittest.TestCase):
     def test_report_without_jev_is_labelled(self):
         rep = B.report(B.build(snap()))

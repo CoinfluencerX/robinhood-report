@@ -50,6 +50,22 @@ def cmd_check_story(a):
     return 0
 
 
+def cmd_verify_report(a):
+    """Re-check a published report.json: its story may only use numbers from its own data."""
+    rep = _load(a.report)
+    if not rep.get("story"):
+        print("no story in report")
+        return 0
+    jev_block = rep.get("jev") or {}
+    bad = story.check(rep["story"]["markdown"], {"snapshot": {"tickers": rep["tickers"], "chain": rep["chain"]},
+                                                 "derived": rep["derived"], "jev": jev_block.get("decisions")})
+    if bad:
+        print("unsupported numbers:", ", ".join(bad), file=sys.stderr)
+        return 1
+    print("published report: story numbers all found in its data")
+    return 0
+
+
 def cmd_report(a):
     built = _load(a.build)
     rep = B.report(built, _load(a.jev), Path(a.story).read_text() if a.story else None, _load(a.jev_status))
@@ -68,12 +84,13 @@ def main(argv=None):
     s = sub.add_parser("build"); s.add_argument("--snapshot", required=True); s.add_argument("--prev"); s.add_argument("--out", default="data/build.json")
     s = sub.add_parser("prompt"); s.add_argument("--build", default="data/build.json"); s.add_argument("--jev")
     s = sub.add_parser("check-story"); s.add_argument("--story", required=True); s.add_argument("--build", default="data/build.json"); s.add_argument("--jev")
+    s = sub.add_parser("verify-report"); s.add_argument("--report", default="data/report.json")
     s = sub.add_parser("report"); s.add_argument("--build", default="data/build.json"); s.add_argument("--jev"); s.add_argument("--story")
     s.add_argument("--jev-status", help="data/jev_status.json (paused/active)")
     s.add_argument("--out", default="data/report.json"); s.add_argument("--metrics-csv")
     a = ap.parse_args(argv)
     return {"collect": cmd_collect, "build": cmd_build, "prompt": cmd_prompt, "check-story": cmd_check_story,
-            "report": cmd_report}[a.cmd](a)
+            "report": cmd_report, "verify-report": cmd_verify_report}[a.cmd](a)
 
 
 if __name__ == "__main__":

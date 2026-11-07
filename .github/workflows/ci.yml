@@ -16,5 +16,5 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python -m unittest -v
-      - name: Published story passes the number check
-        run: python -m rhreport check-story --story data/story.md --build data/build.json
+      - name: Published report's story passes the number check
+        run: python -m rhreport verify-report --report data/report.json
