@@ -1,0 +1,13 @@
+[project]
+name = "robinhood-report"
+version = "0.1.0"
+description = "franklineth's Robinhood Report: read-only on-chain research on Robinhood Chain tokenized stocks"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+rhreport = "rhreport.cli:main"
+
+[tool.setuptools]
+packages = ["rhreport"]

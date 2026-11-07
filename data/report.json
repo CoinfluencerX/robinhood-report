@@ -1,0 +1,271 @@
+{
+  "schema": "robinhood-report/v1",
+  "title": "franklineth's Robinhood Report",
+  "as_of": "2026-11-07T01:01:21Z",
+  "chain": {
+    "id": 46630,
+    "name": "Robinhood Chain testnet",
+    "block": 149767540,
+    "explorer": "https://explorer.testnet.chain.robinhood.com"
+  },
+  "edel": {
+    "pool": "0x0064394b61942924d63dB20192652CddBCcA745d",
+    "oracle": "0x1fa39142101f0090BF172c7E607Ed8e76b477C9f"
+  },
+  "order": [
+    "NFLX",
+    "AMD",
+    "AMZN",
+    "PLTR",
+    "TSLA"
+  ],
+  "order_basis": "utilization (JEV not run for this snapshot)",
+  "jev": null,
+  "tickers": {
+    "TSLA": {
+      "name": "Tesla",
+      "token": "0xC9f9c86933092BbbfFF3CCb4b105A4A94bf3Bd4E",
+      "holders": 242028,
+      "lifetime_transfers": 4873831,
+      "suppliers": 25940,
+      "borrowers": 9514,
+      "oracle_price_usd": 425.0,
+      "supplied": 159960.5782,
+      "borrowed": 24043.6138,
+      "utilization": 0.1503,
+      "supplied_usd": 67983245.75,
+      "borrowed_usd": 10218535.85,
+      "supply_apr": 0.003161,
+      "borrow_apr": 0.023376,
+      "activity": {
+        "sample_size": 200,
+        "window_start": "2026-11-06T20:49:28Z",
+        "window_end": "2026-11-07T00:59:58Z",
+        "window_hours": 4.175,
+        "transfers_per_hour": 47.9,
+        "mint_share": 0.48,
+        "edel_share": 0.1,
+        "organic_share": 0.42,
+        "organic_per_hour": 20.1,
+        "organic_unique_addresses": 32,
+        "kinds": {
+          "organic": 84,
+          "edel": 20,
+          "mint": 96
+        },
+        "edel_methods": {
+          "supply": 8,
+          "withdraw": 7,
+          "borrow": 3,
+          "repay": 2
+        },
+        "example_tx": "0x09d462ea91061e64ce5abde9d3bc3cc7933508d70ea395769b3145ca07060373"
+      }
+    },
+    "AMZN": {
+      "name": "Amazon",
+      "token": "0x5884aD2f920c162CFBbACc88C9C51AA75eC09E02",
+      "holders": 304841,
+      "lifetime_transfers": 4045166,
+      "suppliers": 13625,
+      "borrowers": 12674,
+      "oracle_price_usd": 207.0,
+      "supplied": 63963.4147,
+      "borrowed": 15808.6327,
+      "utilization": 0.2472,
+      "supplied_usd": 13240426.84,
+      "borrowed_usd": 3272386.97,
+      "supply_apr": 0.008541,
+      "borrow_apr": 0.038422,
+      "activity": {
+        "sample_size": 200,
+        "window_start": "2026-11-06T20:33:28Z",
+        "window_end": "2026-11-07T00:57:24Z",
+        "window_hours": 4.399,
+        "transfers_per_hour": 45.5,
+        "mint_share": 0.53,
+        "edel_share": 0.04,
+        "organic_share": 0.43,
+        "organic_per_hour": 19.6,
+        "organic_unique_addresses": 34,
+        "kinds": {
+          "edel": 8,
+          "mint": 106,
+          "organic": 86
+        },
+        "edel_methods": {
+          "borrow": 5,
+          "repay": 3
+        },
+        "example_tx": "0x20fdf62503ab02f565fead8091842108e5d19ed643de9bd9d17173f087baf111"
+      }
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "token": "0x1FBE1a0e43594b3455993B5dE5Fd0A7A266298d0",
+      "holders": 239069,
+      "lifetime_transfers": 3921248,
+      "suppliers": 15045,
+      "borrowers": 14031,
+      "oracle_price_usd": 140.0,
+      "supplied": 95945.327,
+      "borrowed": 22904.9401,
+      "utilization": 0.2387,
+      "supplied_usd": 13432345.78,
+      "borrowed_usd": 3206691.61,
+      "supply_apr": 0.00797,
+      "borrow_apr": 0.037114,
+      "activity": {
+        "sample_size": 200,
+        "window_start": "2026-11-06T22:30:33Z",
+        "window_end": "2026-11-07T00:56:49Z",
+        "window_hours": 2.438,
+        "transfers_per_hour": 82.0,
+        "mint_share": 0.33,
+        "edel_share": 0.03,
+        "organic_share": 0.64,
+        "organic_per_hour": 52.5,
+        "organic_unique_addresses": 53,
+        "kinds": {
+          "edel": 6,
+          "mint": 66,
+          "organic": 128
+        },
+        "edel_methods": {
+          "supply": 1,
+          "withdraw": 1,
+          "borrow": 3,
+          "repay": 1
+        },
+        "example_tx": "0x39bca6cef826779253c3b85978708a885f1bb23e0bf9c7c22c9fc8df6d4bae30"
+      }
+    },
+    "AMD": {
+      "name": "AMD",
+      "token": "0x71178BAc73cBeb415514eB542a8995b82669778d",
+      "holders": 240954,
+      "lifetime_transfers": 4014425,
+      "suppliers": 7431,
+      "borrowers": 12237,
+      "oracle_price_usd": 214.0,
+      "supplied": 32014.608,
+      "borrowed": 13228.0105,
+      "utilization": 0.4132,
+      "supplied_usd": 6851126.11,
+      "borrowed_usd": 2830794.24,
+      "supply_apr": 0.023818,
+      "borrow_apr": 0.064162,
+      "activity": {
+        "sample_size": 200,
+        "window_start": "2026-11-06T20:49:48Z",
+        "window_end": "2026-11-07T01:00:09Z",
+        "window_hours": 4.173,
+        "transfers_per_hour": 47.9,
+        "mint_share": 0.475,
+        "edel_share": 0.025,
+        "organic_share": 0.5,
+        "organic_per_hour": 24.0,
+        "organic_unique_addresses": 36,
+        "kinds": {
+          "organic": 100,
+          "edel": 5,
+          "mint": 95
+        },
+        "edel_methods": {
+          "borrow": 2,
+          "repay": 3
+        },
+        "example_tx": "0x0fbfabdf49320408ed20b0478ad9b92f2c2dd0f3156bc5d088168cb4b32e1b94"
+      }
+    },
+    "NFLX": {
+      "name": "Netflix",
+      "token": "0x3b8262A63d25f0477c4DDE23F83cfe22Cb768C93",
+      "holders": 236683,
+      "lifetime_transfers": 3728083,
+      "suppliers": 4463,
+      "borrowers": 10807,
+      "oracle_price_usd": 83.0,
+      "supplied": 26047.3522,
+      "borrowed": 15131.8524,
+      "utilization": 0.5809,
+      "supplied_usd": 2161930.23,
+      "borrowed_usd": 1255943.75,
+      "supply_apr": 0.3336,
+      "borrow_apr": 0.663348,
+      "activity": {
+        "sample_size": 200,
+        "window_start": "2026-11-06T20:38:24Z",
+        "window_end": "2026-11-07T00:59:43Z",
+        "window_hours": 4.355,
+        "transfers_per_hour": 45.9,
+        "mint_share": 0.515,
+        "edel_share": 0.0,
+        "organic_share": 0.485,
+        "organic_per_hour": 22.3,
+        "organic_unique_addresses": 36,
+        "kinds": {
+          "organic": 97,
+          "mint": 103
+        },
+        "edel_methods": {},
+        "example_tx": "0x47cc54b83bcebf9f72a8519631265d5a7821c280cf67ec5fcc94baa4fe83062e"
+      }
+    }
+  },
+  "derived": {
+    "peer_median": {
+      "utilization": 0.2472,
+      "borrow_apr": 0.038422,
+      "organic_per_hour": 22.3,
+      "mint_share": 0.48
+    },
+    "tickers": {
+      "TSLA": {
+        "utilization_rank": 5,
+        "utilization_vs_peer_median_pp": -9.7,
+        "borrow_apr_vs_peer_median_pp": -1.5,
+        "organic_vs_peer_median": 0.9,
+        "sample_net_borrows": 1,
+        "sample_net_supplies": 1
+      },
+      "AMZN": {
+        "utilization_rank": 3,
+        "utilization_vs_peer_median_pp": 0.0,
+        "borrow_apr_vs_peer_median_pp": 0.0,
+        "organic_vs_peer_median": 0.88,
+        "sample_net_borrows": 2,
+        "sample_net_supplies": 0
+      },
+      "PLTR": {
+        "utilization_rank": 4,
+        "utilization_vs_peer_median_pp": -0.9,
+        "borrow_apr_vs_peer_median_pp": -0.13,
+        "organic_vs_peer_median": 2.35,
+        "sample_net_borrows": 2,
+        "sample_net_supplies": 0
+      },
+      "AMD": {
+        "utilization_rank": 2,
+        "utilization_vs_peer_median_pp": 16.6,
+        "borrow_apr_vs_peer_median_pp": 2.57,
+        "organic_vs_peer_median": 1.08,
+        "sample_net_borrows": -1,
+        "sample_net_supplies": 0
+      },
+      "NFLX": {
+        "utilization_rank": 1,
+        "utilization_vs_peer_median_pp": 33.4,
+        "borrow_apr_vs_peer_median_pp": 62.49,
+        "organic_vs_peer_median": 1.0,
+        "sample_net_borrows": 0,
+        "sample_net_supplies": 0
+      }
+    }
+  },
+  "story": {
+    "markdown": "## The headline\nNetflix is the most-borrowed tokenized stock on Robinhood Chain right now: 58% of the NFLX supplied to the Edel lending market is borrowed out, and borrowers are paying a 66% APR for it. Borrowing a stock token is how you'd short it on-chain, so this is the closest thing the chain has to a short-interest number.\n\n## What the chain shows\n**NFLX.** Utilization sits 33.4 points above the peer median of 24.7%. There are more NFLX borrowers (10,807) than suppliers (4,463), and the rate curve has pushed lenders' yield to 33%. That's what a crowded borrow looks like.\n\n**AMD.** Second on borrow demand: 41% utilization and a 6.4% borrow APR. Like NFLX, it has more borrowers (12,237) than suppliers (7,431).\n\n**AMZN.** Right at the peer median: 24.7% utilization and a 3.8% borrow APR. It has the most holders of any stock token, at 304,841.\n\n**PLTR.** The lending book is ordinary (23.9% utilization), but the wallets aren't. 64% of recent PLTR transfers were organic (not faucet mints and not lending moves), and it ran at 52.5 organic transfers an hour, 2.35 times the peer median of 22.3. PLTR is where people are actually moving tokens around.\n\n**TSLA.** The deepest market ($425 oracle price, the most supplied) and the least borrowed, at 15% utilization and a 2.3% borrow APR. Lots of collateral, little demand to short it.\n\n## How you could get alpha from this\n1. **Weekend borrow demand leads Monday.** Tokenized stocks can be borrowed while Nasdaq is closed. If a stock token's utilization rises over a weekend, the stock underperforms SPY on Monday. Wrong if, across twenty weekends of mainnet data, weekend utilization changes show no rank correlation with Monday's excess return.\n2. **Borrow-rate spikes mark crowding.** When a token's borrow APR jumps far above its peers (NFLX today), the stock outperforms SPY over the next five trading days as the crowded side unwinds. Wrong if spike days do no better than random days.\n3. **Organic activity is attention.** Names with organic transfer rates well above the peer median (PLTR today) see above-normal Nasdaq volume the following week. Wrong if the two are unrelated.\n\n## What this can't tell you\nThis is a testnet. The tokens come from faucets (48% of recent transfers, at the median, were faucet mints), people farm testnet rewards, and nobody has real money at risk. This is also a single snapshot of the latest 200 transfers per stock. Treat all of it as hypotheses to test once Robinhood Chain mainnet has real flows, not as signals.\n",
+    "numbers_checked": true
+  },
+  "disclaimer": "Robinhood Chain testnet: these are test tokens handed out by faucets, not real shares, and testnet users are often farming rewards. Treat every pattern here as a hypothesis to test, not a signal to trade. Independent research, not affiliated with Robinhood. Not investment advice."
+}
